@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple task manager to organize tasks and track your progress.">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>📝 Smart To-Do List</h1>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <label for="taskInput">Enter your task</label>
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+            <button type="button" id="addBtn">Add Task</button>
+        </div>
+
+        <!-- Progress Section -->
+        <section class="progress-section" aria-label="Task progress">
+            <div class="progress-info">
+                <span>Progress</span>
+                <span id="progress">0%</span>
+            </div>
+
+            <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Completed tasks"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+            >
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <!-- Task List -->
+        <ul id="taskList" aria-label="Your tasks"></ul>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
